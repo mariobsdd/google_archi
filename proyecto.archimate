@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<archimate:model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:archimate="http://www.archimatetool.com/archimate" name="Google" id="814fa84a" version="3.1.1">
+  <folder name="Business" id="09a27bee" type="business"/>
+  <folder name="Application" id="55b26e1f" type="application"/>
+  <folder name="Technology" id="894650c3" type="technology"/>
+  <folder name="Motivation" id="49870df0" type="motivation"/>
+  <folder name="Implementation &amp; Migration" id="2db7509e" type="implementation_migration"/>
+  <folder name="Connectors" id="1216ebdf" type="connectors"/>
+  <folder name="Relations" id="91e1c019" type="relations"/>
+  <folder name="Views" id="d85762ff" type="diagrams">
+    <element xsi:type="archimate:ArchimateDiagramModel" id="2fa32710" name="Default View"/>
+  </folder>
+</archimate:model>

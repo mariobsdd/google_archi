@@ -27,6 +27,7 @@
     <element xsi:type="archimate:TriggeringRelationship" id="11d48dee" source="a320e9d0" target="a7fc0b75"/>
     <element xsi:type="archimate:TriggeringRelationship" id="7ec3ea1b" source="992d13c4" target="16dc9bec"/>
     <element xsi:type="archimate:TriggeringRelationship" id="a51eb088" source="16dc9bec" target="258e0bc3"/>
+    <element xsi:type="archimate:TriggeringRelationship" id="24d84482" source="f0c9832d" target="94097c5d"/>
   </folder>
   <folder name="Views" id="d85762ff" type="diagrams">
     <folder name="Application layer" id="bf718913">
@@ -55,9 +56,10 @@
         </child>
         <child xsi:type="archimate:DiagramObject" id="2af7f558" textAlignment="2" archimateElement="f0c9832d">
           <bounds x="2" y="252" width="120" height="55"/>
+          <sourceConnection xsi:type="archimate:Connection" id="0ad86192" source="2af7f558" target="4377644d" relationship="24d84482"/>
         </child>
-        <child xsi:type="archimate:DiagramObject" id="4377644d" textAlignment="2" archimateElement="94097c5d">
-          <bounds x="156" y="192" width="385" height="145"/>
+        <child xsi:type="archimate:DiagramObject" id="4377644d" textAlignment="2" targetConnections="0ad86192" archimateElement="94097c5d">
+          <bounds x="144" y="225" width="385" height="109"/>
           <child xsi:type="archimate:DiagramObject" id="e787344c" textAlignment="2" archimateElement="992d13c4">
             <bounds x="12" y="48" width="97" height="55"/>
             <sourceConnection xsi:type="archimate:Connection" id="b5b0cf1e" source="e787344c" target="e068bab7" relationship="7ec3ea1b"/>

@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <archimate:model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:archimate="http://www.archimatetool.com/archimate" name="Google" id="814fa84a" version="3.1.1">
   <folder name="Business" id="09a27bee" type="business">
-    <element xsi:type="archimate:BusinessEvent" id="a320e9d0" name="Busqueda en linea"/>
+    <element xsi:type="archimate:BusinessEvent" id="a320e9d0" name="Solicitud de webapps"/>
     <element xsi:type="archimate:BusinessProcess" id="a7fc0b75" name="Realizar busqueda"/>
     <element xsi:type="archimate:BusinessProcess" id="83a97710" name="Business Process"/>
-    <element xsi:type="archimate:BusinessProcess" id="47589836" name="Solicitar busqueda"/>
-    <element xsi:type="archimate:BusinessProcess" id="73c7865e" name="Procesar busqueda"/>
-    <element xsi:type="archimate:BusinessProcess" id="6d0b6add" name="Mostrar resultados"/>
+    <element xsi:type="archimate:BusinessProcess" id="47589836" name="Ingresar datos"/>
+    <element xsi:type="archimate:BusinessProcess" id="73c7865e" name="Comprar dominio"/>
+    <element xsi:type="archimate:BusinessProcess" id="6d0b6add" name="Establecer contrato"/>
     <element xsi:type="archimate:BusinessService" id="e7a2da5a" name="Servicio de busqueda en linea"/>
     <element xsi:type="archimate:BusinessEvent" id="f0c9832d" name="Solicitar nueva cuenta"/>
     <element xsi:type="archimate:BusinessProcess" id="94097c5d" name="Crear cuenta"/>
     <element xsi:type="archimate:BusinessProcess" id="992d13c4" name="Solicitar datos"/>
     <element xsi:type="archimate:BusinessProcess" id="16dc9bec" name="Verificar datos"/>
     <element xsi:type="archimate:BusinessProcess" id="258e0bc3" name="Crear cuenta"/>
+    <element xsi:type="archimate:BusinessService" id="144490b2" name="Servicio de cuenta gmail, google+"/>
   </folder>
   <folder name="Application" id="55b26e1f" type="application"/>
   <folder name="Technology" id="894650c3" type="technology"/>
@@ -28,6 +29,7 @@
     <element xsi:type="archimate:TriggeringRelationship" id="7ec3ea1b" source="992d13c4" target="16dc9bec"/>
     <element xsi:type="archimate:TriggeringRelationship" id="a51eb088" source="16dc9bec" target="258e0bc3"/>
     <element xsi:type="archimate:TriggeringRelationship" id="24d84482" source="f0c9832d" target="94097c5d"/>
+    <element xsi:type="archimate:RealisationRelationship" id="58d3f7c1" source="94097c5d" target="144490b2"/>
   </folder>
   <folder name="Views" id="d85762ff" type="diagrams">
     <folder name="Application layer" id="bf718913">
@@ -55,11 +57,12 @@
           <bounds x="336" y="-60" width="120" height="55"/>
         </child>
         <child xsi:type="archimate:DiagramObject" id="2af7f558" textAlignment="2" archimateElement="f0c9832d">
-          <bounds x="2" y="252" width="120" height="55"/>
+          <bounds x="2" y="291" width="120" height="55"/>
           <sourceConnection xsi:type="archimate:Connection" id="0ad86192" source="2af7f558" target="4377644d" relationship="24d84482"/>
         </child>
         <child xsi:type="archimate:DiagramObject" id="4377644d" textAlignment="2" targetConnections="0ad86192" archimateElement="94097c5d">
-          <bounds x="144" y="225" width="385" height="109"/>
+          <bounds x="144" y="264" width="385" height="109"/>
+          <sourceConnection xsi:type="archimate:Connection" id="9e9adc83" source="4377644d" target="13917ea9" relationship="58d3f7c1"/>
           <child xsi:type="archimate:DiagramObject" id="e787344c" textAlignment="2" archimateElement="992d13c4">
             <bounds x="12" y="48" width="97" height="55"/>
             <sourceConnection xsi:type="archimate:Connection" id="b5b0cf1e" source="e787344c" target="e068bab7" relationship="7ec3ea1b"/>
@@ -71,6 +74,33 @@
           <child xsi:type="archimate:DiagramObject" id="60f510bc" textAlignment="2" targetConnections="0a6aaf32" archimateElement="258e0bc3">
             <bounds x="264" y="48" width="85" height="55"/>
           </child>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="13917ea9" textAlignment="2" targetConnections="9e9adc83" archimateElement="144490b2">
+          <bounds x="295" y="168" width="120" height="55"/>
+        </child>
+      </element>
+      <element xsi:type="archimate:ArchimateDiagramModel" id="7a3438af" name="Google apps">
+        <child xsi:type="archimate:DiagramObject" id="88f4fee4" textAlignment="2" archimateElement="a320e9d0">
+          <bounds x="24" y="144" width="100" height="55"/>
+          <sourceConnection xsi:type="archimate:Connection" id="78080529" source="88f4fee4" target="f536c6e0" relationship="11d48dee"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="f536c6e0" textAlignment="2" targetConnections="78080529" archimateElement="a7fc0b75">
+          <bounds x="144" y="120" width="445" height="97"/>
+          <sourceConnection xsi:type="archimate:Connection" id="398e2d95" source="f536c6e0" target="ff0283e1" relationship="ad6ce05a"/>
+          <child xsi:type="archimate:DiagramObject" id="e55e5503" textAlignment="2" archimateElement="47589836">
+            <bounds x="12" y="24" width="120" height="55"/>
+            <sourceConnection xsi:type="archimate:Connection" id="6f4dc5e6" source="e55e5503" target="1fee2534" relationship="e0a2f2c1"/>
+          </child>
+          <child xsi:type="archimate:DiagramObject" id="1fee2534" textAlignment="2" targetConnections="6f4dc5e6" archimateElement="73c7865e">
+            <bounds x="156" y="24" width="120" height="55"/>
+            <sourceConnection xsi:type="archimate:Connection" id="4ab152db" source="1fee2534" target="5fca415f" relationship="19101498"/>
+          </child>
+          <child xsi:type="archimate:DiagramObject" id="5fca415f" textAlignment="2" targetConnections="4ab152db" archimateElement="6d0b6add">
+            <bounds x="300" y="24" width="120" height="55"/>
+          </child>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="ff0283e1" textAlignment="2" targetConnections="398e2d95" archimateElement="e7a2da5a">
+          <bounds x="348" y="12" width="120" height="55"/>
         </child>
       </element>
     </folder>
